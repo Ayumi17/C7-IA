@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="style.css">
+    <title>Inteligencia Artificial</title>
+</head>
+<body>
+    <center>
+    <h1>Inteligencia Artificial</h1>
+    <hr>
+    <h3>Detección de manos</h3>
+    <textarea cols='80' rows='4' id="codigo">
+       var hands = new HandRecognizer();
+
+function setup() {
+  createCanvas(400, 300);
+  frameRate(30);
+}
+
+function draw() {
+  hands.predict();    
+  hands.drawLandmarks(true);
+}
+
+        </textarea><br>
+        <button type="button" id="copyClip" data-clipboard-target="#codigo">Copiar</button>
+        <script src="clipboard.min.js"></script>
+
+    <br><br>
+    <hr>
+    <h3>Dibujar al personaje</h3>
+    <textarea cols='80' rows='4' id="codigo2">
+      //Base de la papa
+      fill(153, 102, 0);
+      ellipse(200, 150, 200, 250);
+      //Ojos de la papa
+      fill(255,255,255);
+      circle(170, 110, 50);
+      circle(230, 110, 50);
+      //Pupilas de la papa
+      fill(0,0,0);
+      circle(170, 110, 20);
+      circle(230, 110, 20);
+          
+        </textarea><br>
+        <button type="button" id="bt1" class="bt1" data-clipboard-target="#codigo2">Copiar</button>
+        <script>
+
+   
+    var clipboard2 = new Clipboard('.bt1');
+    </script>
+    </center>
+    
+</body>
+</html>
